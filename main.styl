@@ -1,0 +1,49 @@
+/* ----------------------------------------
+
+Global Styles
+
+Notes:
+- single-level-deep files imported via glob from parent
+  ie: @require 'base/*' imports all files in base directory,
+      except those explicitly imported beforehand (for 
+      proper order)
+- Import sub-sections by requiring their parent and
+  use an index.styl importing that directory's files
+  either by glob or explicitly (if glob, be careful
+  about import order)
+  eg: @require 'modules/navbar/'
+- Stylus allows for bracketed and bracket-less syntax
+  within the same file. As a general rule, use brackets
+  for single line styles that won't likely be added to (primarily
+  utility classes) and otherwise use the bracket-less syntax
+*/
+
+
+
+@require 'it1.settings/*'
+
+
+
+@require 'it2.tools/*'
+
+
+
+@require 'it3.generic/_normalize'
+
+
+
+@require 'it4.base/*'
+
+
+
+@require 'it5.objects/_objects.button'
+@require 'it5.objects/*'
+
+
+
+@require 'it6.components/_components.buttons'
+@require 'it6.components/*'
+
+
+
+@require 'it7.trumps/*'
