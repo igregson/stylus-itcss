@@ -1,0 +1,63 @@
+/*-----------------------------------------------
+
+Trumps - Layout
+
+*/
+
+
+.inline       { display: inline }
+.block        { display: block }
+.inline-block { display: inline-block }
+.table        { display: table }
+.table-cell   { display: table-cell }
+
+.relative     { position: relative }
+.absolute     { position: absolute }
+.fixed        { position: fixed }
+
+
+.overflow-hidden { overflow: hidden }
+.overflow-visible { overflow: visible }
+.overflow-scroll { overflow: scroll }
+.overflow-auto   { overflow: auto }
+
+.clearfix:before,
+.clearfix:after
+  content: " "
+  display: table
+.clearfix:after { clear: both }
+
+.left  { float: left }
+.right { float: right }
+
+
+.fit { max-width: 100%; width: 100%; }
+
+.border-box { box-sizing: border-box }
+
+.list-inline
+  list-style: none
+  margin-left: 0
+
+// form honeypot field
+.form-honey,
+.dislay-none,
+.none
+  display: none
+  
+
+// absolute center
+// note: parent node must be position: relative
+.abs-center-vert
+  abs-center-vert()
+.abs-center-center
+  abs-center-center()
+
+
+.no-top-border { border-top: none }
+
+.radius-3,
+.rad-3
+  border-radius: 3px
+.rad-2
+  border-radius: 2px

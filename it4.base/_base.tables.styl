@@ -1,0 +1,31 @@
+table
+  width: 100%
+  border-collapse: collapse;
+
+.table--style-wrap
+  border-radius: 3px
+  border: solid 1px #eee
+
+table tr td
+  px($space-2)
+  py($space-1)
+  vertical-align: middle
+
+.table--striped
+  tbody tr:nth-of-type(2n + 1)
+    background-color: darken($c-bg, 4)
+    
+.table--head-dark
+  thead tr 
+    background-color: darken($c-bg, 13)
+
+.table--first-column-dark
+  tbody td:first-of-type
+    background-color: darken($c-bg, 4)
+
+.table--second-column-light
+  tbody td:not(:first-of-type)
+    background-color: darken($c-bg, 7)
+
+.cells--border
+  border: solid 1px black

@@ -1,0 +1,66 @@
+/*-----------------------------------------------
+
+Layout
+
+*/
+
+
+
+
+/*
+Main - The primary wrapper between 
+       the page <header> and <footer>
+*/
+
+// .main 
+
+
+/*
+Container
+*/
+
+.contain
+  max-width: $contain-width
+  height: auto
+  mx(auto)
+  // &:not(.overflow-visible) // to prevent having to use !important to override
+  //   overflow: hidden
+  &:not(.px0)
+    +below($start-padding-point)
+      padding-left: 2%
+      padding-right: 2%    
+
+
+.page-left
+  +above(800px)
+    float: left 
+    max-width: 69%
+    width: 100%
+    padding-right: 1.75%
+.page-sidebar
+  fontMeta()
+  font-size: 95%
+  +above(800px)
+    padding-left: 1.75%
+    float: left
+    max-width: 31%
+    width: 100%
+  p 
+    margin-bottom: 0
+    
+
+
+/*
+Main content section of each page
+*/ 
+
+.content-main
+  font-size: 1.2rem
+  
+
+/*
+Home-Page Target Links
+*/
+
+.sectionTarget:target 
+  padding-top: 57px

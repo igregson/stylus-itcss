@@ -1,0 +1,60 @@
+/*-----------------------------------------------
+
+Components - Icons
+
+*/
+
+
+
+
+
+/*
+base class applied to all icons
+*/
+
+.icon 
+  vertical-align: middle
+
+
+/*
+Icon Utils
+*/
+
+
+// Colors
+
+.icon-white
+  fill: $c-white
+.icon-green
+  fill: $c-green
+
+.icon-boxed_black
+  background-color: $c-bg-nav
+  padding: 3px
+  
+
+
+// Social (bg)
+
+.icon-facebook-li
+  &:hover
+    .icon
+      fill: $c-facebook
+.icon-twitter-li
+  &:hover 
+    .icon
+      fill: $c-twitter
+.icon-pinterest-li
+  &:hover
+    .icon 
+      fill: $c-pinterest
+
+
+// A generic "circle social icon"
+
+$width-social-circle_icon = 44px
+.social-icon_circle
+  iconCirlce-outer($width-social-circle_icon)
+.social-icon_circle .icon
+  iconCircle-inner($width-social-circle_icon - 18px)
+  fill: $c-white

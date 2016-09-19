@@ -1,0 +1,98 @@
+/*-----------------------------------------------
+
+Base - Type
+
+*/
+
+
+
+h1, h2, h3, h4, h5, h6
+  font-weight: $heading-font-weight
+  line-height: $heading-line-height
+  margin-top: $heading-margin-top
+  margin-bottom: $heading-margin-bottom
+  color: $c-heading
+  font-family: $font-fam-sans
+
+
+h1 { font-size: $h1 }
+h2 { font-size: $h2 }
+h3 { font-size: $h3 }
+h4 { font-size: $h4 }
+h5 { font-size: $h5 }
+h6 { font-size: $h6 }
+
+
+p
+  margin-top: $paragraph-margin-top
+  margin-bottom: $paragraph-margin-bottom
+  line-height: 1.4
+
+
+/*
+Lists scoped to .content to prevent having to override
+*/
+
+ol
+  list-style-type: decimal
+  list-style-position: inside
+  
+.content
+  a
+    position: relative
+    &:hover
+      color: $c-link
+      &:after
+        background-color: $c-link
+    &:after
+      position: absolute
+      content: ""
+      height: 2px
+      width: 100%
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: transparent
+  dl, ol, ul:not(.unstyled)
+    margin-top: $list-margin-top
+    margin-bottom: $list-margin-bottom
+  ul, ol
+    padding-left: 0
+    list-style-position: inside
+  ul
+    list-style: disc
+  ol
+    list-style: decimal
+    list-style-position: inside
+  ul ul, ul ol, ol ol, ol ul
+    margin: 1.5rem 0 1.5rem 3rem
+    font-size: 90%
+  li
+    margin-top: 0
+    margin-bottom: .5rem
+  p + ul li,  p + ol li
+    margin-top: 0
+    margin-bottom: 5px
+
+
+pre, code, samp
+  font-family: $monospace-font-family
+  font-size: 1rem
+  background-color: darken($c-bg, 4)
+code
+  border-radius: 3px
+  padding: 1px 10px
+  mx(2px)
+
+
+pre
+  margin-top: 0
+  margin-bottom: $space-2
+  overflow-x: auto
+
+
+hr
+  border: 0
+  border-bottom-style: solid
+  border-bottom-width: 1px
+  border-bottom-color: $c-hr

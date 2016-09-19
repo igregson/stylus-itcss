@@ -1,0 +1,110 @@
+/*-----------------------------------------------
+
+Tools - Mixins
+
+
+Notes: 
+- mixins that use the {block} declaration 
+  must be called with a +
+  ie: +above(600px)
+- other mixins are simply called with 
+  the word + ()
+  ie: mx(20px)
+
+*/
+
+
+
+
+/*
+On-the-fly Media Queries 
+(quick, flexible, and powerful)
+*/
+
+
+// Default Breakpoint
+$bp-default = 680px
+
+// Element-specific breakpoints
+// (here to make them globally available)
+$nav-bp       = 980px
+$bp-modal-off = 500px
+
+$bp-footer-boxes-full = 700px
+
+
+
+above($point)
+  @media screen and (min-width: $point)
+    {block}
+
+below($point)
+  @media screen and (max-width: $point)
+    {block}
+  
+between($below, $above)
+  @media screen and (max-width: $below) and (min-width: $above)
+    {block}
+
+
+
+
+/*
+Spacing Mixins
+*/ 
+
+mx($space)
+  margin-left: $space
+  margin-right: $space
+my($space)
+  margin-top: $space
+  margin-bottom: $space
+
+px($space)
+  padding-left: $space
+  padding-right: $space
+py($space)
+  padding-top: $space
+  padding-bottom: $space
+
+abs-center-vert()
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+abs-center-center()
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)  
+
+
+/*
+Type Mixins
+*/
+
+fontMeta()
+  font-family: $font-fam-sans
+  font-weight: 300
+bold()
+  font-weight: $bold-font-weight
+caps()
+  text-transform: uppercase
+center()
+  text-align: center
+light()
+  font-weight: $light-font-weight
+serif() 
+  font-family: $font-fam-serif
+sans()
+  font-family: $font-fam-sans
+noSelect()
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+selectable()
+  -webkit-user-select: text
+  -moz-user-select: text
+  -ms-user-select: text
+  user-select: text
+  

@@ -1,0 +1,159 @@
+/*-----------------------------------------------
+
+Components - Forms
+
+*/
+ 
+
+
+/*
+Form Control 
+*/
+
+.formControl
+  outline: none
+  box-shadow: none
+  font-size: .9rem
+  padding: 4px 6px
+  &:not(.formControl--textarea)
+    line-height: 1
+  &:not(.formControl--inline)
+    // max-width: 100%
+    // width: 100%
+    display: block
+  &.form-item-error
+    border-color: red
+
+.input--underlined
+  background-color: transparent !important
+  outline: none
+  border: none
+  border-bottom: dashed 1px lighten($c-type, 70)
+  color: lighten($c-type, 33)
+  // display: block
+  line-height: 2
+  font-size: 1rem
+  &:not(.formControl--inline)
+    width: 100%
+    max-width: 377px
+  &:active, 
+  &:focus
+    border-bottom-style: solid
+  
+
+.formControl--btn
+  padding: 20px 20px
+
+
+/*
+Form Light
+*/
+
+$c-placeholder-light = darken($c-gray, 17)
+.form-light
+  input, 
+  textarea
+    color: $c-type
+    &:not(.btn)
+      background-color: $c-bg-form-light
+      &:focus, &:active
+        background-color: darken($c-bg-form-light, 2)
+  ::-webkit-input-placeholder 
+    color: $c-placeholder-light
+  :-moz-placeholder  
+    color: $c-placeholder-light
+  :-ms-input-placeholder
+    color: $c-placeholder-light
+
+
+/*
+Form White (default)
+*/
+
+$c-placeholder-white = darken($c-gray, 18)
+input, 
+textarea
+  color: $c-type
+  &:not(.btn)
+    background-color: $c-white
+    &:focus, &:active
+      // background-color: darken($c-white, 7)
+      border-color: $c-brand
+  ::-webkit-input-placeholder 
+    color: $c-placeholder-white
+  :-moz-placeholder  
+    color: $c-placeholder-white
+  :-ms-input-placeholder
+    color: $c-placeholder-white
+
+
+
+/*
+Placeholder Text 
+(generals... not color dependent)
+*/
+
+::-webkit-input-placeholder 
+  letter-spacing: 1px
+  font-size: .8rem
+  padding-top: 3px
+:-moz-placeholder  
+  letter-spacing: 1px
+  font-size: .8rem
+  padding-top: 3px
+:-ms-input-placeholder
+  letter-spacing: 1px
+  font-size: .8rem
+  padding-top: 3px
+  
+[placeholder]:focus::-webkit-input-placeholder
+  transition: opacity 0.33s 0.33s ease
+  opacity: 0
+[placeholder]:focus:::-moz-placeholder
+  transition: opacity 0.33s 0.33s ease
+  opacity: 0
+[placeholder]:focus:::-ms-input-placeholder
+  transition: opacity 0.33s 0.33s ease
+  opacity: 0  
+
+
+
+/*
+Other
+*/
+
+.formControl--spacingDefault
+  input,
+  textarea
+    margin-bottom: 15px
+
+.label-required
+  &:after
+    display: inline-block
+    content: "*"
+    color: red
+    margin-left: 3px
+
+
+.input-search-site
+  border-radius: 17px
+  font-size: .8rem
+  background-color: transparent
+  padding: 6px 12px 7px 12px
+  
+
+.contact-page_success
+  margin-top: $space-3-5
+  padding: $space-2
+  background: $c-green
+  color: $c-heading
+  
+
+.form--show-on-success
+  display: none
+.form--show-on-success:target
+  display: block
+  ~ .form--hide-on-success
+    display: none
+    
+  

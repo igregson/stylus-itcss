@@ -1,0 +1,106 @@
+/*-----------------------------------------------
+
+Components - Buttons
+
+*/
+
+
+/* ------------------
+Base Class (needed for all buttons)
+*/
+
+.btn
+  color: $c-white
+  border: none
+  padding: $button-padding-y $button-padding-x
+  letter-spacing: 1px
+  border-radius: 2px
+
+
+/*
+Alt Sizes
+*/
+
+.btn-small
+  padding: .15rem $space-1
+  font-size: .8rem
+.btn-wide
+  padding-left: ($button-padding-x * 2)
+  padding-right: ($button-padding-x * 2)
+.btn-large
+  padding-left: ($button-padding-x * 2)
+  padding-right: ($button-padding-x * 2)
+  padding-top: ($button-padding-x * 1)
+  padding-bottom: ($button-padding-x * 1)
+  font-size: 1.1rem
+
+
+
+/* ------------------
+Style Classes 
+*/
+
+
+/*
+Borders
+*/
+
+.btn-border_white
+  border: solid 1px $c-white
+.btn-border_black
+  border: solid 1px $c-black
+
+/*
+Box Shadows
+*/
+
+.btn-shadow-gray
+  box-shadow: 2px 2px 5px #ccc
+
+/*
+Backgrounds
+*/
+
+.btn-red 
+  background-color: $c-red
+  &:not(.btn_no-hover)
+    &:hover, &:focus
+      background-color: darken(@background-color, 7)
+
+.btn-bg-default 
+  background-color: #5a6880
+  &:not(.btn_no-hover)
+    &:hover, &:focus
+      background-color: darken(@background-color, 7)
+
+
+.btn-blue
+  background-color: $c-blue
+  &:not(.btn_no-hover)
+    &:hover, &:focus
+      background-color: darken(@background-color, 7)
+
+.btn-green
+  background-color: $c-btn-green
+  &:not(.btn_no-hover)
+    &:hover, &:focus
+      background-color: darken(@background-color, 7)
+
+.btn-gray
+  background-color: #dfe1e3
+  color: #929294
+  &:not(.btn_no-hover)
+    &:hover, &:focus
+      background-color: darken(@background-color, 7)
+      color: #929294
+
+.btn-orange
+  background-color: $c-orange
+  color: $c-white
+  &:not(.btn_no-hover)
+    &:hover, &:focus
+      background-color: darken(@background-color, 7)
+  
+
+.btn-transparent
+  background-color: transparent
